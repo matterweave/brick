@@ -13,7 +13,7 @@ function love.load()
 end
 
 function love.update(dt)
-    updateFunc()
+    updateFunc(dt)
 end
 
 function love.draw()
