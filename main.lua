@@ -34,6 +34,10 @@ function loadMenu()
         newGame = {
             text = "New Game",
             font = smallFont.font
+        },
+        quit = {
+            text = "Quit",
+            font = smallFont.font
         }
     }
 
