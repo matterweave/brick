@@ -53,19 +53,11 @@ function loadMenu()
 end
 
 function updateMenu(dt)
-    -- menu logic
-    --local x, y = love.mouse.getPosition()
-    --local font = menu.smallFont
-    --local leftBound = 400
-    --local topBound = 300
-    --local rightBound = 400 + font:getWidth('Hello world!')
-    --local bottomBound = 300 + font:getHeight()
-
-    --if x > leftBound and x < rightBound and y > topBound and y < bottomBound then
-    --    drawHover = true
-    --else
-    --    drawHover = false
-    --end
+    if love.mouse.isDown("l") and isInside(love.mouse.getX(),
+        love.mouse.getY(), menu.newGame.x, menu.newGame.y,
+        menu.newGame.width, menu.newGame.height) then
+        loadGame()
+    end
 end
 
 function drawMenu()
@@ -76,4 +68,33 @@ end
 function drawLabel(label)
     love.graphics.setFont(label.font)
     love.graphics.print(label.text, label.x, label.y)
+end
+
+function isInside(x, y, colX, colY, width, height)
+    if x > colX and x < (colX + width) and y > colY and y < (colY + height) then
+        return true
+    else
+        return false
+    end
+end
+
+function loadGame()
+    -- game initialization
+
+    updateFunc = updateGame
+    drawFunc = drawGame
+
+    local labelFont = love.graphics.newFont(24)
+
+    game = {
+        font = labelFont        
+    }
+end
+
+function updateGame(dt)
+    -- game logic
+end
+
+function drawGame()
+    -- game drawing
 end
