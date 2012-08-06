@@ -3,8 +3,6 @@
 -- Copyright (c) 2012, Dylan Sarber <dwsarber@gmail.com>
 --
 
-drawHover = false
-
 function love.load()
     love.graphics.setColor(0, 0, 0, 255)
     love.graphics.setBackgroundColor(255, 255, 255)
@@ -43,6 +41,11 @@ function loadMenu()
     menu.title.height = menu.title.font:getHeight()
     menu.title.x = (love.graphics.getWidth() / 2) - (menu.title.width / 2)
     menu.title.y = 100
+
+    menu.newGame.width = menu.newGame.font:getWidth(menu.newGame.text)
+    menu.newGame.height = menu.newGame.font:getHeight()
+    menu.newGame.x = (love.graphics.getWidth() / 2) - (menu.title.width / 2)
+    menu.newGame.y = 200
 end
 
 function updateMenu(dt)
@@ -63,13 +66,7 @@ end
 
 function drawMenu()
     drawLabel(menu.title)
-
-    love.graphics.setFont(menu.smallFont.font)
-    love.graphics.print('Hello world!', 400, 300)
-
-    if drawHover then
-        love.graphics.print('Hovered', 0, 0)
-    end
+    drawLabel(menu.newGame)
 end
 
 function drawLabel(label)
