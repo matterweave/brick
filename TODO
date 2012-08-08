@@ -1,0 +1,15 @@
+# TODO for Brick
+
+## In Progress
+
+## Not Started
+
+* Implement sprite creation function
+* Implement gui label creation function
+* Implement brick generation code
+* Create logic for setting up game level
+* Figure out some way to more easily set relative position of sprites
+    (for screen-size changes during gameplay)
+* Implement logic to send bricks down the play field
+* Add collision detection for bricks
+    (each brick object should probably have collision points as data)
