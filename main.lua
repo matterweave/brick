@@ -3,6 +3,8 @@
 -- Copyright (c) 2012, Dylan Sarber <dwsarber@gmail.com>
 --
 
+require('gui')
+
 function love.load()
     love.graphics.setColor(0, 0, 0, 255)
     love.graphics.setBackgroundColor(255, 255, 255)
