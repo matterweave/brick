@@ -92,8 +92,18 @@ function loadGame()
     local labelFont = love.graphics.newFont(24)
 
     game = {
-        font = labelFont
+        font = labelFont,
+        score = 0,
+        level = 1,
+        bricks = sprite.brick.makeBricks(),
+        pieceFalling = false
     }
+
+    game.scoreText = label.new("Score: " .. game.score, game.font, 0, 0)
+    game.levelText = label.new("Level: " .. game.level, game.font, 0, 0)
+
+    game.brickCount = util.len(game.bricks)
+    game.nextPiece = game.bricks[math.random(game.brickCount)]
 end
 
 function updateGame(dt)
@@ -102,4 +112,6 @@ end
 
 function drawGame()
     -- game drawing
+    label.draw(game.scoreText)
+    label.draw(game.levelText)
 end
