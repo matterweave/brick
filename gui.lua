@@ -9,6 +9,8 @@ label.new = function(text, font, x, y)
     label.font = font
     label.x = x
     label.y = y
+    label.w = label.font:getWidth(label.text)
+    label.h = label.font:getHeight()
     return label
 end
 

@@ -69,13 +69,8 @@ function updateMenu(dt)
 end
 
 function drawMenu()
-    drawLabel(menu.title)
-    drawLabel(menu.newGame)
-end
-
-function drawLabel(label)
-    love.graphics.setFont(label.font)
-    love.graphics.print(label.text, label.x, label.y)
+    label.draw(menu.title)
+    label.draw(menu.newGame)
 end
 
 function isInside(x, y, colX, colY, width, height)
