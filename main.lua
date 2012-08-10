@@ -108,6 +108,17 @@ end
 
 function updateGame(dt)
     -- game logic
+    if not pieceFalling then
+        game.currentPiece = game.nextPiece
+        game.currentPiece.x = 0
+        game.currentPiece.y = 0
+        game.nextPiece = game.bricks[math.random(game.brickCount)] -- DUPLICATE!! HISSSSS!!!!
+    end
+
+    game.currentPiece.y = game.currentPiece.y + 16
+
+    -- check for collisions
+    -- and stop the brick if it hits something else
 end
 
 function drawGame()
