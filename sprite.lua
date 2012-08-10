@@ -16,5 +16,5 @@ end
 -- Generates the various pentaminoes
 sprite.brick.makeBricks = function(image)
     -- body
-    return { { x = 0, y = 0 } } -- stub code
+    return { { x = 0, y = 0, blocks = {} } } -- stub code
 end

@@ -4,6 +4,7 @@
 --
 
 require('gui')
+require('physics')
 require('sprite')
 require('util')
 
@@ -119,6 +120,10 @@ function updateGame(dt)
 
     -- check for collisions
     -- and stop the brick if it hits something else
+    -- No blocks passed for now
+    if physics.checkBrickCollision(game.currentPiece, { }) then
+        -- split out the blocks, start the next piece, etc.
+    end
 end
 
 function drawGame()
