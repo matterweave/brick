@@ -1,7 +1,9 @@
 -- Utility functions and such
 
+util = {}
+
 -- Find the length of a numerically indexed table
-function len(array)
+util.len = function(array)
     if array == nil then
         return 0
     end
