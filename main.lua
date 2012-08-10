@@ -89,7 +89,7 @@ function loadGame()
     local labelFont = love.graphics.newFont(24)
 
     game = {
-        font = labelFont        
+        font = labelFont
     }
 end
 
