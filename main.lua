@@ -69,8 +69,8 @@ function updateMenu(dt)
 end
 
 function drawMenu()
-    label.draw(menu.title)
-    label.draw(menu.newGame)
+    gui.label.draw(menu.title)
+    gui.label.draw(menu.newGame)
 end
 
 function isInside(x, y, colX, colY, width, height)
