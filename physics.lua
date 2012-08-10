@@ -19,7 +19,7 @@ end
 -- Return true if an object has a valid (x,y) position and width and height,
 -- otherwise false
 physics.hasExtents = function(obj)
-    if obj.x == nil or obj.y == nil
+    if obj.x == nil or obj.y == nil or
         obj.w == nil or obj.h == nil then
         return false
     else
