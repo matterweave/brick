@@ -1,4 +1,5 @@
 -- Utility functions and such
+module(..., package.seeall)
 
 util = {}
 

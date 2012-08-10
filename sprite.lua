@@ -1,4 +1,5 @@
 -- Static sprites
+module(..., package.seeall)
 
 sprite = {}
 sprite.brick = {}

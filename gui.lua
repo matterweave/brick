@@ -1,4 +1,5 @@
 -- GUI stuff
+module(..., package.seeall)
 
 label = {}
 

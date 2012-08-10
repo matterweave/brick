@@ -59,9 +59,11 @@ function loadMenu()
 end
 
 function updateMenu(dt)
-    if love.mouse.isDown("l") and isInside(love.mouse.getX(),
-        love.mouse.getY(), menu.newGame.x, menu.newGame.y,
-        menu.newGame.width, menu.newGame.height) then
+    if love.mouse.isDown("l") and
+        physics.checkCollision({
+            x = love.mouse.getX(),
+            y = love.mouse.getY()
+        }, menu.newGame) then
         loadGame()
     end
 end
@@ -100,8 +102,8 @@ function loadGame()
         pieceFalling = false
     }
 
-    game.scoreText = label.new("Score: " .. game.score, game.font, 0, 0)
-    game.levelText = label.new("Level: " .. game.level, game.font, 0, 0)
+    game.scoreText = gui.label.new("Score: " .. game.score, game.font, 0, 0)
+    game.levelText = gui.label.new("Level: " .. game.level, game.font, 0, 0)
 
     game.brickCount = util.len(game.bricks)
     game.nextPiece = game.bricks[math.random(game.brickCount)]
@@ -128,6 +130,6 @@ end
 
 function drawGame()
     -- game drawing
-    label.draw(game.scoreText)
-    label.draw(game.levelText)
+    gui.label.draw(game.scoreText)
+    gui.label.draw(game.levelText)
 end
