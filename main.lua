@@ -6,6 +6,7 @@
 require('gui')
 
 function love.load()
+    love.graphics.setMode(800, 600)
     love.graphics.setColor(0, 0, 0, 255)
     love.graphics.setBackgroundColor(255, 255, 255)
 
