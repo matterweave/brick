@@ -47,14 +47,14 @@ function loadMenu()
         }
     }
 
-    menu.title.width = menu.title.font:getWidth(menu.title.text)
-    menu.title.height = menu.title.font:getHeight()
-    menu.title.x = (love.graphics.getWidth() / 2) - (menu.title.width / 2)
+    menu.title.w = menu.title.font:getWidth(menu.title.text)
+    menu.title.h = menu.title.font:getHeight()
+    menu.title.x = (love.graphics.getWidth() / 2) - (menu.title.w / 2)
     menu.title.y = 100
 
-    menu.newGame.width = menu.newGame.font:getWidth(menu.newGame.text)
-    menu.newGame.height = menu.newGame.font:getHeight()
-    menu.newGame.x = (love.graphics.getWidth() / 2) - (menu.title.width / 2)
+    menu.newGame.w = menu.newGame.font:getWidth(menu.newGame.text)
+    menu.newGame.h = menu.newGame.font:getHeight()
+    menu.newGame.x = (love.graphics.getWidth() / 2) - (menu.title.w / 2)
     menu.newGame.y = 200
 end
 
@@ -62,7 +62,9 @@ function updateMenu(dt)
     if love.mouse.isDown("l") and
         physics.checkCollision({
             x = love.mouse.getX(),
-            y = love.mouse.getY()
+            y = love.mouse.getY(),
+            w = 0,
+            h = 0
         }, menu.newGame) then
         loadGame()
     end
