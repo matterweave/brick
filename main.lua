@@ -4,6 +4,8 @@
 --
 
 require('gui')
+require('sprite')
+require('util')
 
 function love.load()
     love.graphics.setMode(800, 600)
