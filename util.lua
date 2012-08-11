@@ -1,10 +1,8 @@
 -- Utility functions and such
 module(..., package.seeall)
 
-util = {}
-
 -- Find the length of a numerically indexed table
-util.len = function(array)
+len = function(array)
     if array == nil then
         return 0
     end
