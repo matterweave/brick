@@ -100,7 +100,7 @@ function loadGame()
     }
 
     game.scoreText = gui.label.new("Score: " .. game.score, game.font, 0, 0)
-    game.levelText = gui.label.new("Level: " .. game.level, game.font, 0, 0)
+    game.levelText = gui.label.new("Level: " .. game.level, game.font, 0, game.font:getHeight())
 
     game.brickCount = util.len(game.bricks)
     game.nextPiece = game.bricks[math.random(game.brickCount)]
