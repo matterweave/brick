@@ -1,7 +1,6 @@
 # Brick
 
-A simple Tetris clone. No credit is taken for any of the gameplay,
-graphics, or other media utilized in the original game of Tetris.
+A simple Tetris clone.
 
 Some simple new features were added to make this particular clone more
 unique.
